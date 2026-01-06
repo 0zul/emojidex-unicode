@@ -1,0 +1,51 @@
+{
+    "name": "emojidex-unicode",
+    "version": "1.0.0",
+    "author": "0zul",
+    "homepage": "https://github.com/0zul/emojidex-unicode",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/0zul/emojidex-unicode.git"
+    },
+    "bugs": {
+        "url": "https://github.com/0zul/emojidex-unicode/issues"
+    },
+    "private": false,
+    "license": "MIT",
+    "type": "module",
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "keywords": [
+        "emoji",
+        "unicode",
+        "emoji-data",
+        "emoji-search",
+        "text",
+        "emoji-utils"
+    ],
+    "exports": {
+        ".": {
+            "import": "./dist/esm/index.js",
+            "require": "./dist/cjs/index.js"
+        }
+    },
+    "types": "./dist/esm/index.d.ts",
+    "sideEffects": false,
+    "scripts": {
+        "fetch": "bun scripts/fetch-emoji-test.ts",
+        "parse": "bun scripts/parse-emoji-test.ts",
+        "update": "bun run fetch && bun run parse",
+        "build": "rm -rf dist && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && bun run copy:data",
+        "copy:data": "cp -r data dist/data",
+        "validate": "bun scripts/validate-build.ts",
+        "interop": "bun scripts/interop-test.ts",
+        "build:check": "bun run build && bun run validate"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0",
+        "ts-node": "^10.9.0"
+    }
+}
