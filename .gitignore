@@ -1,0 +1,50 @@
+# ------------------------------
+# Node / Bun
+# ------------------------------
+node_modules/
+bun.lockb
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ------------------------------
+# Build output
+# ------------------------------
+dist/
+*.tsbuildinfo
+
+# ------------------------------
+# Generated data
+# ------------------------------
+emoji-test.txt
+data/*.json
+
+# (keep directory, ignore contents)
+!data/.gitkeep
+
+# ------------------------------
+# TypeScript
+# ------------------------------
+coverage/
+*.d.ts.map
+
+# ------------------------------
+# IDE / Editor
+# ------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ------------------------------
+# OS
+# ------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# Misc
+# ------------------------------
+.env
+.env.*
