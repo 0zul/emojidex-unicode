@@ -5,7 +5,7 @@
     "homepage": "https://github.com/0zul/emojidex-unicode",
     "repository": {
         "type": "git",
-        "url": "https://github.com/0zul/emojidex-unicode.git"
+        "url": "git+https://github.com/0zul/emojidex-unicode.git"
     },
     "bugs": {
         "url": "https://github.com/0zul/emojidex-unicode/issues"
