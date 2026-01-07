@@ -32,6 +32,12 @@
             "require": "./dist/cjs/index.js"
         }
     },
+    "publishConfig": {
+        "access": "public"
+    },
+    "engines": {
+        "node": ">=18"
+    },
     "types": "./dist/esm/index.d.ts",
     "sideEffects": false,
     "scripts": {
